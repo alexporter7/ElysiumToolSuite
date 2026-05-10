@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETSHub", "ETSHub\ETSHub.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETSNewsGenerator", "ETSNewsGenerator\ETSNewsGenerator.csproj", "{8C42A441-CFD4-41F7-89AD-DABF578C2D0B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETSBuildTool", "ETSBuildTool\ETSBuildTool.csproj", "{D4089A55-EBD0-44FE-9912-53BD26F04485}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{8C42A441-CFD4-41F7-89AD-DABF578C2D0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C42A441-CFD4-41F7-89AD-DABF578C2D0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C42A441-CFD4-41F7-89AD-DABF578C2D0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4089A55-EBD0-44FE-9912-53BD26F04485}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4089A55-EBD0-44FE-9912-53BD26F04485}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4089A55-EBD0-44FE-9912-53BD26F04485}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4089A55-EBD0-44FE-9912-53BD26F04485}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
