@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ETSBuildTool"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="ETS Build Tool" Height="450" Width="800">
     <Grid>
 
     </Grid>

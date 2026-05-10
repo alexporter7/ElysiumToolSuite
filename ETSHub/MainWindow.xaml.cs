@@ -20,4 +20,9 @@ public partial class MainWindow : Window {
         InitializeComponent();
     }
 
+
+    private void EtsBuildTools_OnClick(object sender, RoutedEventArgs e) {
+        //TODO
+    }
+
 }

@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ETSHub"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="ETS Hub" Height="200" Width="200">
+    
     <Grid>
-
+        <StackPanel Orientation="Vertical" Margin="10">
+            <Button Name="EtsBuildTools" Content="ETS Build Tools" Margin="0, 5" Click="EtsBuildTools_OnClick"></Button>
+            <Button Name="EtsNewsGenerator" Content="ETS News Generator" Margin="0, 5"></Button>
+            <Button Content="TBD 1" Margin="0, 5"></Button>
+            <Button Content="TBD 2" Margin="0, 5"></Button>
+        </StackPanel>
     </Grid>
 </Window>
