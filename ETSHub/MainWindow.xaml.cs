@@ -16,13 +16,17 @@ namespace ETSHub;
 /// </summary>
 public partial class MainWindow : Window {
 
+    private ETSHubCore EtsHubCore;
+    
     public MainWindow() {
         InitializeComponent();
+        EtsHubCore = new ETSHubCore();
     }
 
 
     private void EtsBuildTools_OnClick(object sender, RoutedEventArgs e) {
-        //TODO
+        ETSBuildTool.MainWindow EtsBuildToolWindow = new ETSBuildTool.MainWindow();
+        EtsBuildToolWindow.Show();
     }
 
 }
