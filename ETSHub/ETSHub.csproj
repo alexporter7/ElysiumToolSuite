@@ -14,7 +14,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ETSBuildTool\ETSBuildTool.csproj" />
+      <ProjectReference Include="..\BuildManager\BuildManager.csproj" />
       <ProjectReference Include="..\ETSCore\ETSCore.csproj" />
     </ItemGroup>
 
