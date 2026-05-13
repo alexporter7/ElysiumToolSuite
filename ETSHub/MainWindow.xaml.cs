@@ -1,13 +1,4 @@
-﻿using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace ETSHub;
 
@@ -24,9 +15,16 @@ public partial class MainWindow : Window {
     }
 
 
-    private void EtsBuildTools_OnClick(object sender, RoutedEventArgs e) {
-        ETSBuildTool.MainWindow EtsBuildToolWindow = new ETSBuildTool.MainWindow();
+    private void BuildManager_OnClick(object sender, RoutedEventArgs e) {
+        BuildManager.MainWindow EtsBuildToolWindow = new BuildManager.MainWindow();
         EtsBuildToolWindow.Show();
+    }
+    
+    private void CityManager_OnClick(object sender, RoutedEventArgs e) {
+        // CityManager.MainWindow CityManagerWindow = new CityManager().MainWindow();
+        // CityManagerW.Show();
+        CityManager.MainWindow CityManagerWindow = new CityManager.MainWindow();
+        CityManagerWindow.Show();
     }
 
 }

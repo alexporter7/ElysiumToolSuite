@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace ETSBuildTool;
+namespace BuildManager;
 
 /// <summary>
 /// Interaction logic for App.xaml

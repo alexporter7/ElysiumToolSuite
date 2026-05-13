@@ -8,7 +8,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsManager", "NewsManager\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildManager", "BuildManager\BuildManager.csproj", "{D4089A55-EBD0-44FE-9912-53BD26F04485}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityManager", "CityManager\CityManager.csproj", "{DA06D909-BB1C-49FA-9058-F1B5777D47D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityManager", "CityManager\CityManager.csproj", "{64F26B9F-4151-4CE5-9445-A82154DC32CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,9 +32,9 @@ Global
 		{D4089A55-EBD0-44FE-9912-53BD26F04485}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4089A55-EBD0-44FE-9912-53BD26F04485}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4089A55-EBD0-44FE-9912-53BD26F04485}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DA06D909-BB1C-49FA-9058-F1B5777D47D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DA06D909-BB1C-49FA-9058-F1B5777D47D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DA06D909-BB1C-49FA-9058-F1B5777D47D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DA06D909-BB1C-49FA-9058-F1B5777D47D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64F26B9F-4151-4CE5-9445-A82154DC32CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64F26B9F-4151-4CE5-9445-A82154DC32CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64F26B9F-4151-4CE5-9445-A82154DC32CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64F26B9F-4151-4CE5-9445-A82154DC32CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

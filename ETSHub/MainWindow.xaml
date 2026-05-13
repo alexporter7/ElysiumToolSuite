@@ -9,9 +9,9 @@
     
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10">
-            <Button Name="EtsBuildTools" Content="Build Manager" Margin="0, 5" Click="EtsBuildTools_OnClick"></Button>
+            <Button Name="EtsBuildTools" Content="Build Manager" Margin="0, 5" Click="BuildManager_OnClick"></Button>
             <Button Name="EtsNewsGenerator" Content="News Manager" Margin="0, 5"></Button>
-            <Button Content="City Manager" Margin="0, 5"></Button>
+            <Button Content="City Manager" Margin="0, 5" Click="CityManager_OnClick"></Button>
             <Button Content="TBD 2" Margin="0, 5"></Button>
         </StackPanel>
     </Grid>

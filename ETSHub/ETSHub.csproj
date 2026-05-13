@@ -4,7 +4,7 @@
         <OutputType>WinExe</OutputType>
         <TargetFramework>net9.0-windows</TargetFramework>
         <Nullable>enable</Nullable>
-        <ImplicitUsings>enable</ImplicitUsings>
+        <ImplicitUsings>disable</ImplicitUsings>
         <UseWPF>true</UseWPF>
     </PropertyGroup>
 
@@ -16,6 +16,7 @@
     <ItemGroup>
       <ProjectReference Include="..\BuildManager\BuildManager.csproj" />
       <ProjectReference Include="..\ETSCore\ETSCore.csproj" />
+        <ProjectReference Include="..\CityManager\CityManager.csproj" />
     </ItemGroup>
 
 </Project>
