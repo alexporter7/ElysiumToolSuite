@@ -5,7 +5,13 @@ namespace ETSHub.Init;
 public class ETSHubInit {
 
     private static ILoggerFactory LogFactory = 
-        LoggerFactory.Create(builder => builder.SetMinimumLevel(LogLevel.Information));
+        LoggerFactory.Create(builder => builder
+                                        .SetMinimumLevel(LogLevel.Information)
+                                               .AddSimpleConsole(options => {
+            options.IncludeScopes   = true;
+            options.SingleLine      = true;
+            options.TimestampFormat = "hh:mm:ss";
+        }));
 
     private static ILogger Logger = LogFactory.CreateLogger<ETSHubInit>();
     

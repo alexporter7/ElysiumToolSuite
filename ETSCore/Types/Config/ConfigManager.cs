@@ -3,15 +3,13 @@ using Microsoft.Extensions.Logging;
 namespace ETSCore.Types.Config;
 
 public class ConfigManager {
-
-    private static ILoggerFactory LogFactory = LoggerFactory
-        .Create(builder => builder.SetMinimumLevel(LogLevel.Information));
     private ILogger       Logger;
     
     private Dictionary<string, ConfigOption> ConfigOptions;
 
     public ConfigManager() {
-        Logger = LogFactory.CreateLogger<ConfigManager>();
+        Logger = ETSGlobalCore.LogFactory.CreateLogger<ConfigManager>();
+        Logger.LogInformation("ConfigManager has been initialized");
     }
 
     public void SetConfigOptions(Dictionary<string, ConfigOption> options) {
@@ -19,6 +17,7 @@ public class ConfigManager {
     }
 
     public string GetValue(string optionName) {
+        Logger.LogInformation($"Requesting config value for option [{optionName}]");
         return ConfigOptions[optionName].GetOptionValue();
     }
 

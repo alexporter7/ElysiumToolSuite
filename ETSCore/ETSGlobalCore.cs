@@ -4,8 +4,17 @@ namespace ETSCore;
 
 public class ETSGlobalCore {
 
-    private static ILoggerFactory LogFactory = 
-        LoggerFactory.Create(builder => builder.SetMinimumLevel(LogLevel.Information));
+    public static ILoggerFactory LogFactory = 
+        LoggerFactory.Create(builder => {
+            builder
+                .SetMinimumLevel(LogLevel.Information)
+                .AddSimpleConsole(options => {
+                    options.IncludeScopes   = true;
+                    options.SingleLine      = true;
+                    options.TimestampFormat = "[HH:mm:ss:fffff] ";
+                });
+        });
+    
     private static ILogger Log;
 
     public ETSGlobalCore() {
