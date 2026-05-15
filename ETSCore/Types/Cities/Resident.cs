@@ -2,13 +2,15 @@ namespace ETSCore.Types;
 
 public class Resident {
 
-    private string FirstName;
-    private string MiddleName;
-    private string LastName;
-    private int    Age;
-    private Job    ResidentJob;
-    private int    Salary;
-    private Wallet ResidentWallet;
+    private string  FirstName;
+    private string  MiddleName;
+    private string  LastName;
+    private int     Age;
+    private int     Salary;
+    
+    private Address ResidentAddress;
+    private Job     ResidentJob;
+    private Wallet  ResidentWallet;
 
     public string GetFirstName {
         get => FirstName;
@@ -42,6 +44,10 @@ public class Resident {
 
     public Wallet GetWallet() {
         return ResidentWallet;
+    }
+
+    public Address GetAddress() {
+        return ResidentAddress;
     }
 
 }

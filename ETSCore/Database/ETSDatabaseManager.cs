@@ -1,4 +1,6 @@
 using System.Data;
+using ETSCore.Global;
+using ETSCore.Util;
 using Microsoft.Data.Sqlite;
 using Microsoft.Extensions.Logging;
 
@@ -9,7 +11,11 @@ public class ETSDatabaseManager {
     private static ILoggerFactory LogFactory = 
         LoggerFactory.Create(builder => builder.SetMinimumLevel(LogLevel.Information));
     private static ILogger          Log;
-    private        SqliteConnection ConfigConnection;
+    
+    private SqliteConnection ConfigConnection;
+    private SqliteConnection ResidentConnection;
+    private SqliteConnection CityConnection;
+    private SqliteConnection BuildCOnnection;
 
     public ETSDatabaseManager() {
         Log = LogFactory.CreateLogger<ETSDatabaseManager>();
@@ -19,25 +25,24 @@ public class ETSDatabaseManager {
     }
 
     private void LoadConfigDatabase() {
-        Log.LogInformation("Attempting to open config.db");
-        ConfigConnection = new SqliteConnection("Data Source=config.db");
+        Log.LogInformation($"Attempting to open [{NameGlobal.ConfigDatabaseFileName}]");
+        ConfigConnection = new SqliteConnection($"Data Source={NameGlobal.ConfigDatabasePath}");
         ConfigConnection.Open();
 
-        var OptionTableCommand = @"SELECT name
-                                 FROM sqlite_master
-                                 WHERE type='table'
-                                     AND name='option'";
-        using var command = new SqliteCommand(OptionTableCommand, ConfigConnection);
-        //command.ExecuteNonQuery();
-        var reader = command.ExecuteReader();
-        if(!reader.HasRows)
-            InitConfigDatabase();
+        bool configDbExists = DataUtil.CheckTableExists(ConfigConnection, "option");
+        if(!configDbExists)
+            InitConfigDatabase(ConfigConnection);
         
         
     }
 
-    private void InitConfigDatabase() {
-        
+    private void LoadResidentDatabase() {
+        Log.LogInformation($"Attemping to open [{NameGlobal.ResidentDatabaseFileName}]");
+        ResidentConnection = DataUtil.GetConnection(NameGlobal.ResidentDatabasePath);
+    }
+
+    private void InitConfigDatabase(SqliteConnection connection) {
+        DataUtil.CreateTable(connection, DatabaseGlobal.CreateConfigTableCommand);
     }
 
 
