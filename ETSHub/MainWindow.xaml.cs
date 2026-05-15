@@ -7,11 +7,11 @@ namespace ETSHub;
 /// </summary>
 public partial class MainWindow : Window {
 
-    private ETSHubCore EtsHubCore;
+    public AppCore AppCore;
     
     public MainWindow() {
         InitializeComponent();
-        EtsHubCore = new ETSHubCore();
+        AppCore = new AppCore();
     }
 
 

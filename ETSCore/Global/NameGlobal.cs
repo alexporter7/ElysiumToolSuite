@@ -13,4 +13,7 @@ public class NameGlobal {
     public static readonly string CityDatabasePath    = $"{DatabaseFileDirectory}\\{CityDatabaseFileName}";
     public static readonly string BuildDatabasePath    = $"{DatabaseFileDirectory}\\{BuildDatabaseFileName}";
 
+    public static readonly string DataFileName   = "data.json";
+    public static readonly string ConfigFileName = "config.json";
+
 }
