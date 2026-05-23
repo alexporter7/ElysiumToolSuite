@@ -4,15 +4,23 @@ namespace ETSCore.Types;
 
 public class Address {
 
-    public  BlockPos MainPosition;
-    private City     AddressCity;
-    private District AddressDistrict;
+    public int    Number { get; set; }
+    public string Street { get; set; }
 
-    private int      Number;
-    private string   Street;
+    public BlockPos MainPosition    { get; set; }
+    public City     AddressCity     { get; set; }
+    public District AddressDistrict { get; set; }
 
 
-    public string GetAddress() {
+    public Address(BlockPos mainPosition, City addressCity, District addressDistrict, int number, string street) {
+        MainPosition    = mainPosition;
+        AddressCity     = addressCity;
+        AddressDistrict = addressDistrict;
+        Number          = number;
+        Street          = street;
+    }
+
+    public string GetAddressString() {
         return $"{Number} {Street}, {AddressDistrict.GetName()} District, {AddressCity.GetCityName()}";
     }
 

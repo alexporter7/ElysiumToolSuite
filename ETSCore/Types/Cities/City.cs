@@ -1,3 +1,5 @@
+using ETSCore.Types.Cities.Residents;
+
 namespace ETSCore.Types;
 
 public class City {

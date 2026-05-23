@@ -1,5 +1,8 @@
 using ETSCore;
 using ETSCore.Database;
+using ETSCore.Types;
+using ETSCore.Types.Cities.Residents;
+using ETSCore.Types.Registration;
 using Microsoft.Data.Sqlite;
 using Microsoft.Extensions.Logging;
 
@@ -23,10 +26,20 @@ public class AppCore {
     private ETSGlobalCore EtsGlobalCore;
     //private ETSDatabaseManager DatabaseManager;
 
+    public WatchDawg<City>     CityWatchDawg;
+    public WatchDawg<District> DistrictWatchDawg;
+    public WatchDawg<Resident> ResidentWatchDawg;
+
     public AppCore() {
         Logger.LogInformation("AppCore has been initialized");
         EtsGlobalCore = new ETSGlobalCore();
-        //DatabaseManager = new ETSDatabaseManager();
+        TestData.TestSerialization();
+
+        Logger.LogInformation("Registering WatchDawgs");
+        CityWatchDawg     = new WatchDawg<City>();
+        DistrictWatchDawg = new WatchDawg<District>();
+        ResidentWatchDawg = new WatchDawg<Resident>();
+        
     }
 
 }

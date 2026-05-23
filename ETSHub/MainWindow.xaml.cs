@@ -28,4 +28,9 @@ public partial class MainWindow : Window {
         CityManagerWindow.Show();
     }
 
+    private void ResidentManagerButton_OnClick(object sender, RoutedEventArgs e) {
+        ResidentManager.MainWindow ResidentManagerWindow = new ResidentManager.MainWindow();
+        ResidentManagerWindow.Show();
+    }
+
 }

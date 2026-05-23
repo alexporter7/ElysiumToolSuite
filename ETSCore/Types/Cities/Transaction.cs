@@ -1,5 +1,6 @@
 using System.Text;
 using ETSCore.Enums;
+using ETSCore.Types.Cities.Residents;
 using Microsoft.Extensions.Logging;
 
 namespace ETSCore.Types;
@@ -32,16 +33,16 @@ public class Transaction {
     }
 
     public bool AttemptTransaction() {
-        Logger.LogInformation($"Attempting Transaction between [{Creator.GetFirstName}] and [{Customer.GetFirstName}");
-        if (!Customer.GetWallet().HasFunds(AmountTransacted)) {
-            Logger.LogInformation($"Resident [{Customer.GetFirstName}] only has [{Customer.GetWallet().GetMoney()} but the" +
+        Logger.LogInformation($"Attempting Transaction between [{Creator.FirstName}] and [{Customer.FirstName}");
+        if (!Customer.ResidentWallet.HasFunds(AmountTransacted)) {
+            Logger.LogInformation($"Resident [{Customer.FirstName}] only has [{Customer.ResidentWallet.Money} but the" +
                                   $" the transaction amount is [{AmountTransacted}]");
             return false;
         }
-        Logger.LogInformation($"Resident [{Customer.GetFirstName}] has enough funds [{Customer.GetWallet().GetMoney()}" +
+        Logger.LogInformation($"Resident [{Customer.FirstName}] has enough funds [{Customer.ResidentWallet.Money}" +
                               $"for the transaction of [{AmountTransacted}]");
-        Customer.GetWallet().SpendMoney(AmountTransacted);
-        Creator.GetWallet().AddMoney(AmountTransacted);
+        Customer.ResidentWallet.SpendMoney(AmountTransacted);
+        Creator.ResidentWallet.AddMoney(AmountTransacted);
 
         return true;
     }

@@ -1,53 +1,26 @@
-namespace ETSCore.Types;
+using System.Text.Json.Serialization;
+
+namespace ETSCore.Types.Cities.Residents;
 
 public class Resident {
 
-    private string  FirstName;
-    private string  MiddleName;
-    private string  LastName;
-    private int     Age;
-    private int     Salary;
+    public string FirstName  { get; set; }
+    public string MiddleName { get; set; }
+    public string LastName   { get; set; }
+    public int    Age        { get; set; }
     
-    private Address ResidentAddress;
-    private Job     ResidentJob;
-    private Wallet  ResidentWallet;
+    public Address ResidentAddress { get; set; }
+    public Job     ResidentJob     { get; set; }
+    public Wallet  ResidentWallet  { get; set; }
 
-    public string GetFirstName {
-        get => FirstName;
-        set => FirstName = value ?? throw new ArgumentNullException(nameof(value));
-    }
-
-    public string GetMiddleName {
-        get => MiddleName;
-        set => MiddleName = value ?? throw new ArgumentNullException(nameof(value));
-    }
-
-    public string GetLastName {
-        get => LastName;
-        set => LastName = value ?? throw new ArgumentNullException(nameof(value));
-    }
-
-    public int GetAge {
-        get => Age;
-        set => Age = value;
-    }
-
-    public Job GetResidentJob {
-        get => ResidentJob;
-        set => ResidentJob = value;
-    }
-
-    public int GetSalary {
-        get => Salary;
-        set => Salary = value;
-    }
-
-    public Wallet GetWallet() {
-        return ResidentWallet;
-    }
-
-    public Address GetAddress() {
-        return ResidentAddress;
+    public Resident(string firstName, string middleName, string lastName, int age, Address residentAddress, Job residentJob, Wallet residentWallet) {
+        FirstName       = firstName;
+        MiddleName      = middleName;
+        LastName        = lastName;
+        Age             = age;
+        ResidentAddress = residentAddress;
+        ResidentJob     = residentJob;
+        ResidentWallet  = residentWallet;
     }
 
 }

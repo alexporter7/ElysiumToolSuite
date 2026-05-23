@@ -1,16 +1,10 @@
-namespace ETSCore.Types;
+namespace ETSCore.Types.Cities;
 
+
+//TODO: Add some way to track multiple accounts or something
 public class Wallet {
 
-    private int Money;
-
-    public int GetMoney() {
-        return Money;
-    }
-
-    public void SetMoney(int amount) {
-        Money = amount;
-    }
+    public int Money { get; set; }
 
     public bool HasFunds(int amount) {
         return Money > amount;

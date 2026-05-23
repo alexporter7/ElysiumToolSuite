@@ -1,4 +1,5 @@
 using ETSCore.Types;
+using ETSCore.Types.Cities.Residents;
 
 namespace ETSCore.Data;
 
