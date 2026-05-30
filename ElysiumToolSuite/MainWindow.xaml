@@ -7,6 +7,56 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <!-- Menu Row -->
+        <Menu Grid.Row="0" VerticalAlignment="Center">
+            <MenuItem x:Name="FileMenuItem" Header="File" Click="FileMenuItem_OnClick">
+                
+            </MenuItem>
+            <MenuItem x:Name="EditMenuItem" Header="Edit" Click="EditMenuItem_OnClick">
+                
+            </MenuItem>
+        </Menu>
+        
+        <!-- Current City Label Row -->
+        <Grid x:Name="CurrentCityGrid" Grid.Row="1" VerticalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Label x:Name="SelectedCityLabel" Content="Current City: None" FontWeight="Bold" FontSize="15" Grid.Column="0"/>
+            <Button x:Name="OpenCityButton" Content="Open City" Grid.Column="1" Margin="0,0,5,0"/>
+        </Grid>
+        
+        <!-- Tab Element Row -->
+        <TabControl Grid.Row="2" SelectionChanged="Selector_OnSelectionChanged">
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Overview</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>City Management</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Resident Management</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
