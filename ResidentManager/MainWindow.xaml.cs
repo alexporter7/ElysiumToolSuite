@@ -8,6 +8,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ETSHub;
+using Microsoft.Extensions.Logging;
 
 namespace ResidentManager;
 
@@ -16,8 +18,14 @@ namespace ResidentManager;
 /// </summary>
 public partial class MainWindow : Window {
 
-    public MainWindow() {
+    private ILogger Logger = AppCore.LogFactory.CreateLogger("ResidentManagerWindow");
+
+    public AppCore GlobalAppCore;
+
+    public MainWindow(AppCore appCore) {
         InitializeComponent();
+        GlobalAppCore = appCore;
+        Logger.LogInformation("Resident Manager window has been initialized");
     }
 
 }

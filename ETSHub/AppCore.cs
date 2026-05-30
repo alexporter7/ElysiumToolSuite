@@ -24,21 +24,24 @@ public class AppCore {
     private ILogger Logger = LogFactory.CreateLogger<AppCore>();
 
     private ETSGlobalCore EtsGlobalCore;
-    //private ETSDatabaseManager DatabaseManager;
 
     public WatchDawg<City>     CityWatchDawg;
     public WatchDawg<District> DistrictWatchDawg;
     public WatchDawg<Resident> ResidentWatchDawg;
 
+    public City CurrentCity;
+
     public AppCore() {
         Logger.LogInformation("AppCore has been initialized");
         EtsGlobalCore = new ETSGlobalCore();
-        TestData.TestSerialization();
 
         Logger.LogInformation("Registering WatchDawgs");
         CityWatchDawg     = new WatchDawg<City>();
         DistrictWatchDawg = new WatchDawg<District>();
         ResidentWatchDawg = new WatchDawg<Resident>();
+        
+        TestData.TestSerialization();
+        TestData.TestWatchDawg(this);
         
     }
 

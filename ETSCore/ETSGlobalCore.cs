@@ -1,3 +1,4 @@
+using System.Net.Mime;
 using Microsoft.Extensions.Logging;
 
 namespace ETSCore;
@@ -20,6 +21,7 @@ public class ETSGlobalCore {
     public ETSGlobalCore() {
         Log = LogFactory.CreateLogger<ETSGlobalCore>();
         Log.LogInformation("ETSGlobalCore has been initialized");
+        
     }
 
 }

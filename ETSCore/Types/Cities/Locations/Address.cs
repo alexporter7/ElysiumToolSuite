@@ -4,8 +4,9 @@ namespace ETSCore.Types;
 
 public class Address {
 
-    public int    Number { get; set; }
-    public string Street { get; set; }
+    public int    Number  { get; set; }
+    public string Street  { get; set; }
+    public string CityKey { get; set; }
 
     public BlockPos MainPosition    { get; set; }
     public City     AddressCity     { get; set; }

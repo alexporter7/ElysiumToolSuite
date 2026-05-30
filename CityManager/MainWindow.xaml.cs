@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ETSHub;
 
 namespace CityManager;
 
@@ -16,8 +17,10 @@ namespace CityManager;
 /// </summary>
 public partial class MainWindow : Window {
 
-    public MainWindow() {
+    public AppCore GlobalAppCore;
+    public MainWindow(AppCore appCore) {
         InitializeComponent();
+        GlobalAppCore = appCore;
     }
 
 }

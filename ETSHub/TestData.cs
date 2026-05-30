@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Printing;
+using System.Runtime.CompilerServices;
 using System.Text.Json;
+using System.Windows;
 using ETSCore;
 using ETSCore.Enums;
 using ETSCore.Types;
@@ -52,6 +54,10 @@ public class TestData {
     public static void TestDeserialization() {
         Log.LogInformation("Testing deserializtion of ETS Data in JSON");
         
+    }
+
+    public static void TestWatchDawg(AppCore appCore) {
+        appCore.CityWatchDawg.AddEntry("testCity", TestCity);
     }
 
 }

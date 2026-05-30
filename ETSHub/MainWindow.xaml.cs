@@ -24,12 +24,12 @@ public partial class MainWindow : Window {
     private void CityManager_OnClick(object sender, RoutedEventArgs e) {
         // CityManager.MainWindow CityManagerWindow = new CityManager().MainWindow();
         // CityManagerW.Show();
-        CityManager.MainWindow CityManagerWindow = new CityManager.MainWindow();
+        CityManager.MainWindow CityManagerWindow = new CityManager.MainWindow(AppCore);
         CityManagerWindow.Show();
     }
 
     private void ResidentManagerButton_OnClick(object sender, RoutedEventArgs e) {
-        ResidentManager.MainWindow ResidentManagerWindow = new ResidentManager.MainWindow();
+        ResidentManager.MainWindow ResidentManagerWindow = new ResidentManager.MainWindow(AppCore);
         ResidentManagerWindow.Show();
     }
 
