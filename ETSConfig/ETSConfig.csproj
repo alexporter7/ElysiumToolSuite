@@ -9,8 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\ETSCore\ETSCore.csproj"/>
-        <ProjectReference Include="..\ETSConfig\ETSConfig.csproj"/>
+      <ProjectReference Include="..\ETSCore\ETSCore.csproj" />
     </ItemGroup>
 
 </Project>

@@ -21,11 +21,16 @@ public partial class MainWindow : Window {
     public  ETSAppCore EtsAppCore;
     private ILogger    Logger;
 
+    public ETSConfig.MainWindow ConfigWindow;
+    public MainWindow ResidentWindow;
+
     public MainWindow() {
         InitializeComponent();
         EtsAppCore = new ETSAppCore();
         Logger     = EtsAppCore.Factory.CreateLogger("ElysiumToolSuiteWindow");
         Logger.LogInformation("The ETS Main WPF Application has initialized");
+
+        ConfigWindow = new ETSConfig.MainWindow(EtsAppCore);
     }
 
     private void MenuItem_OnClick(object sender, RoutedEventArgs e) {
